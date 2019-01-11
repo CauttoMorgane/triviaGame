@@ -8,16 +8,15 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-item *ngFor='let question of questions'>
-        <ion-grid>
+    <div *ngFor='let question of questions'>
+        <ion-grid *ngIf="!question.done">
             <ion-row>
                 <ion-col col-12>
                     <ion-grid>
                         <ion-row>
                             <ion-col col-12>
-                                <p>Question x :</p>
-                                <p>xx pts</p>
-                                <span> xx:xx </span>
+                                <p>Question X :</p>
+                                <p>{{score}}pts</p>
                                 <p>{{question.question}}</p>
                             </ion-col>
                         </ion-row>
@@ -30,10 +29,10 @@
                         <ion-grid>
                             <ion-row>
                                 <ion-col col-6>
-                                    <ion-button (click)="goodAnswer()" size="medium">{{question.correct_answer}}</ion-button>
+                                    <ion-button (click)="goodAnswer(question)" size="medium">{{question.correct_answer}}</ion-button>
                                 </ion-col>
                                 <ion-col col-6>
-                                    <ion-button (click)="badAnswer()" size="medium">{{question.incorrect_answers[0]}}</ion-button>
+                                    <ion-button (click)="badAnswer(question)" size="medium">{{question.incorrect_answers[0]}}</ion-button>
                                 </ion-col>
                             </ion-row>
                         </ion-grid>
@@ -42,22 +41,22 @@
                         <ion-grid>
                             <ion-row>
                                 <ion-col col-12>
-                                    <ion-button (click)="goodAnswer()" size="medium">{{question.correct_answer}}</ion-button>
+                                    <ion-button (click)="goodAnswer(question)" size="medium">{{question.correct_answer}}</ion-button>
                                 </ion-col>
                             </ion-row>
                             <ion-row>
                                 <ion-col col-12>
-                                    <ion-button (click)="badAnswer()" size="medium">{{question.incorrect_answers[0]}}</ion-button>
+                                    <ion-button (click)="badAnswer(question)" size="medium">{{question.incorrect_answers[0]}}</ion-button>
                                 </ion-col>
                             </ion-row>
                             <ion-row>
                                 <ion-col col-12>
-                                    <ion-button (click)="badAnswer()" size="medium">{{question.incorrect_answers[1]}}</ion-button>
+                                    <ion-button (click)="badAnswer(question)" size="medium">{{question.incorrect_answers[1]}}</ion-button>
                                 </ion-col>
                             </ion-row>
                             <ion-row>
                                 <ion-col col-12>
-                                    <ion-button (click)="badAnswer()" size="medium">{{question.incorrect_answers[2]}}</ion-button>
+                                    <ion-button (click)="badAnswer(question)" size="medium">{{question.incorrect_answers[2]}}</ion-button>
                                 </ion-col>
                             </ion-row>
                         </ion-grid>
@@ -65,5 +64,5 @@
                 </ion-col>
             </ion-row>
         </ion-grid>
-    </ion-item>
+    </div>
 </ion-content>

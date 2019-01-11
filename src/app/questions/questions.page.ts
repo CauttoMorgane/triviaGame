@@ -26,11 +26,13 @@ export class QuestionsPage implements OnInit {
         );
     }
 
-    goodAnswer() {
+    goodAnswer(question) {
+        question.done = true;
         this.score = this.score + 5;
     }
 
-    badAnswer() {
+    badAnswer(question) {
+        question.done = true;
         this.score = this.score - 5;
     }
 
