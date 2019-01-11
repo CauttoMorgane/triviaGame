@@ -7,23 +7,37 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content *ngFor='let question of questions' padding>
-    <ion-item>
-        <p>Question x :</p>
-        <p>xx pts</p>
-        <span> xx:xx </span>
-        <p>{{question.question}}</p>
-    </ion-item>
-    <ion-item>
-        <ion-button size="medium">Small Button</ion-button>
-    </ion-item>
-    <ion-item>
-        <ion-button size="medium">Small Button</ion-button>
-    </ion-item>
-    <ion-item>
-        <ion-button size="medium">Small Button</ion-button>
-    </ion-item>
-    <ion-item>
-        <ion-button size="medium">Small Button</ion-button>
+<ion-content padding>
+    <ion-item *ngFor='let question of questions'>
+        <ion-grid>
+            <ion-row>
+                <ion-col col-12>
+                    <p>Question x :</p>
+                    <p>xx pts</p>
+                    <span> xx:xx </span>
+                    <p>{{question.question}}</p>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-12>
+                    <ion-button size="medium">Small Button</ion-button>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-12>
+                    <ion-button size="medium">Small Button</ion-button>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-12>
+                    <ion-button size="medium">Small Button</ion-button>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-12>
+                    <ion-button size="medium">Small Button</ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
     </ion-item>
 </ion-content>

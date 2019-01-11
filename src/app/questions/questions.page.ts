@@ -14,8 +14,15 @@ export class QuestionsPage implements OnInit {
     }
 
     ngOnInit() {
-        this.questions = this.questionsService.getQuestions();
-        this.questionsService.loadQuestions();
+        this.questions = this.questionsService.questions;
+        this.questionsService.loadQuestions().subscribe((response) => {
+                this.questions = response.results;
+                console.log(this.questions);
+                console.log(response);
+            }, (error) => {
+                console.error(error);
+            }
+        );
     }
 
 }

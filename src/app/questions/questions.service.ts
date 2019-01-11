@@ -8,7 +8,7 @@ import {HttpService} from '../shared/http.service';
     providedIn: 'root'
 })
 export class QuestionsService {
-    private questions: Question[] = [];
+    public questions: Question[] = [];
 
     constructor(public httpService: HttpService) {
     }
@@ -17,14 +17,10 @@ export class QuestionsService {
         return this.questions;
     }
 
-    loadQuestions() {
-        this.httpService
-            .get('https://opentdb.com/api.php?amount=5&difficulty=easy')
-            .subscribe((response) => {
-                    console.log(response);
-                }, (error) => {
-                    console.error(error);
-                }
-            );
+    loadQuestions():any {
+
+        return this.httpService
+            .get('https://opentdb.com/api.php?amount=5&difficulty=easy');
+
     }
 }
