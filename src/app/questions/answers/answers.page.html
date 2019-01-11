@@ -7,7 +7,7 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content  align="center" padding>
+<ion-content #good  align="center" padding>
   <div align="center" style="background-color:#91DC5A;font-size:80px;padding:35px;color:white;">
     <b>+ 5</b>
   </div>
@@ -19,6 +19,18 @@
 
   <ion-button size="small">Next</ion-button>
 
+</ion-content>
 
+<ion-content  #bad align="center" padding>
+  <div align="center" style="background-color:#CC0000;font-size:80px;padding:35px;color:white;">
+    <b>- 5</b>
+  </div>
+
+  <div align="center" style="font-size:35px;padding:15px;">
+    <p>Wrong answer!</p>
+    <h3>The good answer was :</h3>
+  </div>
+
+  <ion-button size="small">Next</ion-button>
 
 </ion-content>
