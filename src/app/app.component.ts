@@ -27,7 +27,7 @@ export class AppComponent {
     },
     {
       title: 'Answers',
-      url: '/questions/answers',
+      url: '/answers',
       icon: 'list'
     },
     {
