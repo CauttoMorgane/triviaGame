@@ -9,6 +9,7 @@ import {QuestionsService} from './questions.service';
 })
 export class QuestionsPage implements OnInit {
     questions: Question[] = [];
+    score = 0;
 
     constructor(public questionsService: QuestionsService) {
     }
@@ -23,6 +24,14 @@ export class QuestionsPage implements OnInit {
                 console.error(error);
             }
         );
+    }
+
+    goodAnswer() {
+        this.score = this.score + 5;
+    }
+
+    badAnswer() {
+        this.score = this.score - 5;
     }
 
 }
