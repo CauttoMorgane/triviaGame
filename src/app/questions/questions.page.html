@@ -12,30 +12,56 @@
         <ion-grid>
             <ion-row>
                 <ion-col col-12>
-                    <p>Question x :</p>
-                    <p>xx pts</p>
-                    <span> xx:xx </span>
-                    <p>{{question.question}}</p>
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col col-12>
+                                <p>Question x :</p>
+                                <p>xx pts</p>
+                                <span> xx:xx </span>
+                                <p>{{question.question}}</p>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
                 </ion-col>
             </ion-row>
             <ion-row>
                 <ion-col col-12>
-                    <ion-button size="medium">Small Button</ion-button>
-                </ion-col>
-            </ion-row>
-            <ion-row>
-                <ion-col col-12>
-                    <ion-button size="medium">Small Button</ion-button>
-                </ion-col>
-            </ion-row>
-            <ion-row>
-                <ion-col col-12>
-                    <ion-button size="medium">Small Button</ion-button>
-                </ion-col>
-            </ion-row>
-            <ion-row>
-                <ion-col col-12>
-                    <ion-button size="medium">Small Button</ion-button>
+                    <ion-item *ngIf='question.type === "boolean"'>
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col col-6>
+                                    <ion-button size="medium">{{question.correct_answer}}</ion-button>
+                                </ion-col>
+                                <ion-col col-6>
+                                    <ion-button size="medium">{{question.incorrect_answers[0]}}</ion-button>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </ion-item>
+                    <ion-item *ngIf='question.type !== "boolean"'>
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col col-12>
+                                    <ion-button size="medium">{{question.correct_answer}}</ion-button>
+                                </ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col col-12>
+                                    <ion-button size="medium">{{question.incorrect_answers[0]}}</ion-button>
+                                </ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col col-12>
+                                    <ion-button size="medium">{{question.incorrect_answers[1]}}</ion-button>
+                                </ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col col-12>
+                                    <ion-button size="medium">{{question.incorrect_answers[2]}}</ion-button>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </ion-item>
                 </ion-col>
             </ion-row>
         </ion-grid>
