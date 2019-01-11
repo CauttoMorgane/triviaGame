@@ -7,23 +7,23 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content *ngFor='let question of questions' padding>
     <ion-item>
-        <p>Question x:</p>
+        <p>Question x :</p>
         <p>xx pts</p>
-        <span>xx:xx</span>
-        <p>XXX</p>
+        <span> xx:xx </span>
+        <p>{{question.question}}</p>
     </ion-item>
-    <ion-item no-line>
-        <ion-button size="large">Small Button</ion-button>
+    <ion-item>
+        <ion-button size="medium">Small Button</ion-button>
     </ion-item>
-    <ion-item no-line>
-        <ion-button size="large">Small Button</ion-button>
+    <ion-item>
+        <ion-button size="medium">Small Button</ion-button>
     </ion-item>
-    <ion-item no-line>
-        <ion-button size="large">Small Button</ion-button>
+    <ion-item>
+        <ion-button size="medium">Small Button</ion-button>
     </ion-item>
-    <ion-item no-line>
-        <ion-button size="large">Small Button</ion-button>
+    <ion-item>
+        <ion-button size="medium">Small Button</ion-button>
     </ion-item>
 </ion-content>
