@@ -3,29 +3,29 @@
         <ion-buttons slot="start">
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
-        <ion-title>Questions {{score}}pts</ion-title>
+        <ion-title>Questions</ion-title>
     </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
     <div *ngFor='let question of questions'>
-        <ion-grid *ngIf="!question.done">
-            <ion-row>
+        <ion-grid *ngIf="!question.done" class="card-question">
+            <ion-row class="card-question-head">
                 <ion-col col-12>
                     <ion-grid>
                         <ion-row>
                             <ion-col col-12>
-                                <p>Question X :</p>
-                                <p>{{score}}pts</p>
-                                <p>{{question.question}}</p>
+                                <p>Question :</p>
+                                <p class="card-question-score">{{score}}pts</p>
+                                <p class="card-question-question">{{question.question}}</p>
                             </ion-col>
                         </ion-row>
                     </ion-grid>
                 </ion-col>
             </ion-row>
             <ion-row>
-                <ion-col col-12>
-                    <ion-item *ngIf='question.type === "boolean"'>
+                <ion-col col-12 class="card-question-answer">
+                    <div *ngIf='question.type === "boolean"'>
                         <ion-grid>
                             <ion-row>
                                 <ion-col col-6>
@@ -36,8 +36,8 @@
                                 </ion-col>
                             </ion-row>
                         </ion-grid>
-                    </ion-item>
-                    <ion-item *ngIf='question.type !== "boolean"'>
+                    </div>
+                    <div *ngIf='question.type !== "boolean"'>
                         <ion-grid>
                             <ion-row>
                                 <ion-col col-12>
@@ -60,9 +60,13 @@
                                 </ion-col>
                             </ion-row>
                         </ion-grid>
-                    </ion-item>
+                    </div>
                 </ion-col>
             </ion-row>
         </ion-grid>
+    </div>
+    <div class="card-score">
+        <p>Your score :</p>
+        {{score}} pts
     </div>
 </ion-content>

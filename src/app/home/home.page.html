@@ -7,23 +7,23 @@
 </ion-header>
 
 <ion-content  align="center">
-    <div align="center">
-        <div style="width: 65%"><img src="/assets/multicolor1.jpg"/></div>
+    <div class="card-header-home" align="center">
+        Trivia Game
     </div>
 
     <ion-grid>
         <ion-row>
             <ion-col col-6>
-                <ion-button color="success" large full>Easy</ion-button>
+                <ion-button color="success" large (click)="easyQuestions()">Easy</ion-button>
             </ion-col>
             <ion-col col-6>
-                <ion-button color="warning" large full>Medium</ion-button>
+                <ion-button color="warning" large>Medium</ion-button>
             </ion-col>
         </ion-row>
 
         <ion-row>
             <ion-col col-6>
-                <ion-button color="danger" large full>Hard</ion-button>
+                <ion-button color="danger" large>Hard</ion-button>
             </ion-col>
             <ion-col col-6>
                 <ion-item>

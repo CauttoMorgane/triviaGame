@@ -1,0 +1,28 @@
+.card-question {
+  height: 100vh;
+
+  .card-question-head {
+    background-color: #FF8800;
+    color: white;
+  }
+
+  .card-question-score{
+    margin-top: -16px;
+    text-align: right;
+  }
+
+  .card-question-question{
+    text-align: center;
+  }
+
+  .card-question-answer{
+    text-align: center;
+  }
+}
+
+.card-score{
+  height: 70vh;
+  text-align: center;
+  margin-top: 20vh;
+  font-size: 45px;
+}

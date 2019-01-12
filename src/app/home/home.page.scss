@@ -4,8 +4,10 @@
   //background-image : url("../../assets/images/multicolor.jpg") no-repeat center center;
 }
 
-
-ion-content.background {
-  background-image: url('../../assets/multicolor1.jpg') no-repeat center center;
-  --webkit-background-image: url('../../assets/multicolor1.jpg');
+.card-header-home{
+  height: 30vh;
+  color: white;
+  font-size: 45px;
+  padding-top: 10vh;
+  background-color: purple;
 }
