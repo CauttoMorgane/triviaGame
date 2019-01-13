@@ -8,5 +8,17 @@
 </ion-header>
 
 <ion-content padding>
-
+    <ion-list>
+        <ion-item *ngFor='let score of scores'>
+            <ion-card class="score" padding>
+                <ion-avatar item-start>
+                    <img [src]="score.avatar_url"/>
+                </ion-avatar>
+                <h2>{{ score.nickname }}</h2>
+                <h3>
+                    {{ score.score }}pts / {{ score.time }}s
+                </h3>
+            </ion-card>
+        </ion-item>
+    </ion-list>
 </ion-content>
